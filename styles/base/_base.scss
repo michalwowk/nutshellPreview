@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus {
+  outline-color: $c-brand;
+  outline-offset: 0.5rem;
+}
+
+picture {
+  display: block;
+}
+
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+::selection {
+  background-color: $c-brand;
+  color: $c-white;
+}

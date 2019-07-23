@@ -1,0 +1,113 @@
+@include font-face(
+  "Millunium Medium",
+  "../fonts/MilluniumMedium/Millunium-Medium"
+);
+
+@include font-face("FontAwesome", "../fonts/FontAwesome/fontawesome-webfont");
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: $black;
+}
+
+.heading-1,
+.heading-2,
+.heading-3 {
+  font-family: "Millunium Medium", sans-serif;
+  font-weight: normal;
+}
+
+.heading-4,
+.heading-5 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.heading-1 {
+  font-size: 3.8rem;
+  line-height: 3.8rem;
+  @include media-breakpoint-up(md) {
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+  }
+}
+
+.heading-2 {
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  @include media-breakpoint-up(md) {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+  }
+}
+
+.heading-3 {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  @include media-breakpoint-up(md) {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
+}
+
+.heading-4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 2px;
+  @include media-breakpoint-up(md) {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
+
+.heading-5 {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  @include media-breakpoint-up(md) {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  @include media-breakpoint-up(md) {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+}
+
+.btn-main {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  @include media-breakpoint-up(md) {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+}
+
+.navigation__link {
+  color: $c-white;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  @include media-breakpoint-up(md) {
+    font-size: 3rem;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.section-title-small {
+  color: $c-gray;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}

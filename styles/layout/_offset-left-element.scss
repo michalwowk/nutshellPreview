@@ -1,0 +1,25 @@
+.offset-left-col-xl {
+  @include media-breakpoint-up(xl) {
+    margin-left: -5.5%;
+    transform: translateY(8rem);
+  }
+}
+
+.offset-left-col-md {
+  @include media-breakpoint-between(md, xl) {
+    margin-left: -5.5%;
+    transform: translateY(10rem);
+  }
+}
+
+.offset-top-sm {
+  @include media-breakpoint-down(sm) {
+    margin-top: -3.5rem;
+  }
+}
+
+.offset-bottom-sm {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: -3.5rem;
+  }
+}

@@ -1,0 +1,29 @@
+.statistics {
+  margin-top: -0.2rem;
+  padding: 3.5rem 3rem 2.8rem;
+  background-color: $c-brand;
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    padding: 4.5rem 4.5rem 2.8rem;
+    width: 35%;
+    position: absolute;
+    right: 0;
+    transform: translateY(12rem);
+  }
+  @include media-breakpoint-up(xl) {
+    transform: translateY(-0.2rem);
+    width: 42%;
+    right: 52%;
+    top: 100%;
+    padding: 5rem 2rem 2.8rem;
+  }
+  &__title {
+    padding-bottom: 1.6rem;
+  }
+  &__box {
+    margin: 0.8rem;
+  }
+  &__value {
+    margin-bottom: 0.8rem;
+  }
+}

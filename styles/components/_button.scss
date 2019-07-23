@@ -1,0 +1,52 @@
+.btn-main {
+  border: none;
+  display: inline-block;
+  padding: 8px 47px;
+  color: $c-white;
+  background-color: $c-brand;
+  border-radius: 2px;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid $c-brand;
+  transition: $transition-all-default;
+  @include media-breakpoint-up(md) {
+    padding: 11px 87px;
+  }
+  &:hover {
+    background-color: transparent;
+    color: $c-brand;
+  }
+  &--mobile-full {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: auto;
+    }
+  }
+}
+
+.scroll-down-btn {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  display: block;
+  border: 2px solid $c-white;
+  border-radius: 50%;
+  opacity: 0.7;
+  @include media-breakpoint-up(md) {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+  @include media-breakpoint-up(lg) {
+    opacity: 0;
+  }
+  &::after {
+    content: "\F107";
+    @include absolute-center("both");
+    font-family: FontAwesome;
+    color: $c-white;
+    font-size: 1.9rem;
+    @include media-breakpoint-up(md) {
+      font-size: 2.3rem;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// COLORS
+$c-primary: #1e3066;
+$c-brand: #3fae49;
+$c-white: #fff;
+$c-black: #000;
+$c-gray: #00000080;
+$c-lightgray: #f5f5f5; // lightgray
+$c-lightgray-2: #707070; // lightgray
+$c-warning: #fb4416;
+// TRANSITIONS
+$transition-transform-default: transform 0.2s ease-in-out;
+$transition-opacity-default: opacity 0.2s ease-in-out;
+$transition-all-default: all 0.2s ease-in-out;
+
+// SETTINGS
+$desktop-breakpoint: lg;
+$element-offset-md: 4%;
+$element-offset-xl: 4.5%;

@@ -1,0 +1,14 @@
+.author {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  &__details {
+    font-style: normal;
+    margin-left: 2rem;
+  }
+
+  &__name {
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+}

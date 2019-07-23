@@ -1,0 +1,69 @@
+//TEXT
+.t-center {
+  text-align: center;
+}
+
+.t-uppercase {
+  text-transform: uppercase;
+}
+
+.t-lowercase {
+  text-transform: lowercase;
+}
+
+//BACKGROUND
+.bg-white {
+  background-color: $c-white;
+}
+
+.bg-gray {
+  background-color: $c-lightgray;
+}
+
+.bg-brand {
+  background-color: $c-brand;
+}
+//COLOR
+.c-white {
+  color: $c-white;
+}
+
+.zi-10 {
+  position: relative;
+  z-index: 10;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.dn-xs {
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+}
+
+.dn-sm {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.dn-md {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.dn-xl {
+  @include media-breakpoint-down(xl) {
+    display: none;
+  }
+}
