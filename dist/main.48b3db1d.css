@@ -5492,7 +5492,7 @@ body {
 @media (min-width: 1200px) {
   .section-about__img-col {
     flex-basis: 54%;
-    margin-left: -5%;
+    margin-left: -4%;
     transform: translateY(10.5rem);
   }
 }
