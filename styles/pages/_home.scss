@@ -1,77 +1,120 @@
 .section-about {
+  padding: 12% 0 0;
   background-color: $c-lightgray;
-  padding-top: 12.5%;
   @include media-breakpoint-up(md) {
-    padding-top: 9.4%;
+    background-color: none;
+    background-image: linear-gradient($c-lightgray 85%, $c-white 85%, $c-white);
+    padding: 9.5% 0 0;
   }
   @include media-breakpoint-up(xl) {
-    padding-top: 5.7%;
+    padding-top: 5.4%;
+    background-image: linear-gradient($c-lightgray 79%, $c-white 79%, $c-white);
   }
   &__row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     position: relative;
   }
+
   &__cta-col {
+    flex-basis: 100%;
     @include media-breakpoint-up(md) {
-      align-self: flex-end;
-    }
-  }
-  &__img {
-    @include media-breakpoint-up(md) {
-      transform: translateX(40px);
+      flex-basis: 68%;
     }
     @include media-breakpoint-up(xl) {
-      max-width: 105.5%;
+      flex-basis: 50%;
+    }
+  }
+
+  &__img-col {
+    margin-top: -3rem;
+    @include media-breakpoint-up(md) {
+      flex-basis: 70%;
+      margin-top: 0;
+      margin-left: 3rem;
+    }
+    @include media-breakpoint-up(xl) {
+      flex-basis: 54%;
+      margin-left: -5%;
+      transform: translateY(10.5rem);
+    }
+  }
+
+  &__statistics-col {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      right: 0;
+      width: 35%;
+      top: 45%;
+      transform: translateY(-50%);
+    }
+    @include media-breakpoint-up(xl) {
+      position: static;
+      transform: translateY(0);
+      width: auto;
+      margin: 0 auto 0 7%;
     }
   }
 }
 
 .section-rewards {
-  padding: 12.2% 16px;
+  padding: 12.2% 1.6rem;
   @include media-breakpoint-up(md) {
-    margin-top: -8%;
-    padding: 24.3% 0 5.6%;
+    padding: 8.9% 0 13%;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 4.2% 0 5.4%;
   }
 }
 
 .section-join-us {
-  padding: 11.6% 0 0;
+  background-color: $c-lightgray;
+  padding: 14% 0 0;
+
   @include media-breakpoint-up(md) {
-    padding: 11.6% 0 7.7%;
-  }
-  @include media-breakpoint-up(xl) {
-    padding: 5.6% 0 7.7%;
+    background-image: linear-gradient($c-lightgray 75%, $c-white 75%, $c-white);
+    background-color: none;
+    padding: 10% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
-  &__row {
-    position: relative;
-    @include media-breakpoint-up(md) {
-      flex-direction: column;
-    }
+  @include media-breakpoint-up(xl) {
+    padding: 5.5% 0 5.5%;
+    background-image: none;
+    background-color: $c-lightgray;
   }
-  &__offset-col {
+
+  &__cta-col {
     @include media-breakpoint-up(md) {
-      align-self: flex-end;
-      margin-top: -5rem;
-      padding-top: 5rem;
-      width: 82%;
+      flex-basis: 83%;
     }
     @include media-breakpoint-up(xl) {
-      margin-top: 0;
+      flex-basis: 50%;
+    }
+  }
+  &__blockquote-col {
+    margin-top: -3rem;
+    @include media-breakpoint-up(md) {
+      flex-basis: 87%;
+      margin-left: 13%;
+      padding-top: 6rem;
+      margin-top: -6rem;
+    }
+    @include media-breakpoint-up(xl) {
+      flex-basis: 55%;
       padding-top: 0;
-      position: absolute;
-      width: calc(100% - 44.5%);
-      left: 44.5%;
-      top: 67px;
+      margin-left: -5%;
+      margin-top: 7rem;
     }
   }
 }
 
 .section-contact {
   padding: 0 0 4%;
-  @include media-breakpoint-up(md) {
-    padding: 28% 0 4%;
-    margin-top: -25%;
-  }
 
   @include media-breakpoint-up(xl) {
     padding: 5.25% 0;
@@ -80,6 +123,9 @@
 
   &__form-col {
     padding: 4.2rem 1.6rem;
+    @include media-breakpoint-up(md) {
+      padding: 6.5rem 2.5rem 1.5rem;
+    }
     @include media-breakpoint-up(xl) {
       padding: 0;
     }
