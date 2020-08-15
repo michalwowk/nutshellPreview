@@ -6,6 +6,31 @@
   box-sizing: inherit;
 }
 
+iframe {
+  display: block;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+li {
+  position: relative;
+  margin-bottom: 8px;
+  &::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: $c-brand;
+    position: absolute;
+    top: 8px;
+    left: -2rem;
+    border-radius: 50%;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;

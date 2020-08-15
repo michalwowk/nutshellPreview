@@ -1,13 +1,16 @@
 .header {
-  background-image: url("../img/pp-main-background.jpg");
-  background-position: center;
-  background-size: cover;
+  background-image: url("../img/header-bg.jpg");
+  background-position: center -100px;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
 
   padding: 30% 0 11%;
   @include media-breakpoint-up(md) {
+    background-position: center -50px;
     padding: 23% 0 12%;
   }
   @include media-breakpoint-up(xl) {
+    background-size: contain;
     padding: 12% 0 5%;
   }
 
@@ -22,8 +25,20 @@
     }
   }
 
+  &__buttons {
+    a {
+      margin-bottom: 2rem;
+      @include media-breakpoint-up(sm) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__title {
     margin: 0;
+    .bg-white {
+      padding: 0.8rem 2rem;
+    }
   }
 
   &__title-intro {
@@ -34,6 +49,8 @@
   &__paragraph {
     margin: 2.1rem 0 2.4rem;
     max-width: 64rem;
+    font-weight: 700;
+    font-size: 1.8rem;
     @include media-breakpoint-up(md) {
       margin: 2.9rem 0 3.6rem;
     }

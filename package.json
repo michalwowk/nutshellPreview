@@ -10,9 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "sass": "^1.22.7"
+    "sass": "^1.22.10"
   },
   "dependencies": {
+    "swiper": "^4.5.0",
     "underscore": "^1.9.1"
   }
 }

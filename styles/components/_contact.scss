@@ -1,0 +1,47 @@
+.contact {
+  &__group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__links {
+    margin-top: 2rem;
+  }
+
+  &__link {
+    margin-bottom: 0.8rem;
+  }
+
+  &__social-info {
+    margin-left: 2rem;
+  }
+
+  .col-md-4 {
+    margin-top: 3rem;
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
+  }
+
+  &__navigation {
+    &-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    &-item {
+      &::after {
+        display: none;
+      }
+    }
+
+    &-link {
+      color: $c-black;
+      display: inline-block;
+      margin-bottom: 0.6rem;
+      &:hover {
+        color: $c-brand;
+      }
+    }
+  }
+}

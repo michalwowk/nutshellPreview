@@ -1,0 +1,48 @@
+.carousel {
+  .swiper-container {
+    margin-top: 4rem;
+  }
+
+  .swiper-button {
+    &-prev {
+      background-image: url("../img/arrow-left.svg");
+    }
+    &-next {
+      background-image: url("../img/arrow-right.svg");
+    }
+  }
+
+  .swiper-slide {
+    img {
+      filter: grayscale(1);
+      transition: $transition-all-default;
+    }
+    a {
+      color: $c-black;
+    }
+
+    &:hover {
+      .carousel__title {
+        color: $c-brand;
+      }
+
+      img {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 1.5rem;
+    color: $c-black;
+    transition: $transition-all-default;
+  }
+  .img-container {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,14 +1,11 @@
 .section-about {
-  padding: 12% 0 0;
-  background-color: $c-lightgray;
+  padding: 5rem 0 0;
   @include media-breakpoint-up(md) {
     background-color: none;
-    background-image: linear-gradient($c-lightgray 85%, $c-white 85%, $c-white);
-    padding: 9.5% 0 0;
+    padding: 6rem 0 0;
   }
   @include media-breakpoint-up(xl) {
-    padding-top: 5.4%;
-    background-image: linear-gradient($c-lightgray 79%, $c-white 79%, $c-white);
+    padding-top: 7rem;
   }
   &__row {
     display: flex;
@@ -59,33 +56,75 @@
   }
 }
 
-.section-rewards {
-  padding: 12.2% 1.6rem;
+.section-map {
+  padding: 5rem 1.6rem;
   @include media-breakpoint-up(md) {
-    padding: 8.9% 0 13%;
+    padding: 6rem 0;
   }
   @include media-breakpoint-up(xl) {
-    padding: 4.2% 0 5.4%;
+    padding: 7rem 0;
   }
 }
 
 .section-join-us {
-  background-color: $c-lightgray;
-  padding: 14% 0 0;
+  padding: 5rem 0 0;
 
   @include media-breakpoint-up(md) {
-    background-image: linear-gradient($c-lightgray 75%, $c-white 75%, $c-white);
     background-color: none;
-    padding: 10% 0;
+    padding: 6rem 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
 
   @include media-breakpoint-up(xl) {
-    padding: 5.5% 0 5.5%;
+    padding: 7rem 0;
     background-image: none;
-    background-color: $c-lightgray;
+  }
+
+  &__cta-col {
+    @include media-breakpoint-up(md) {
+      flex-basis: 83%;
+    }
+    @include media-breakpoint-up(xl) {
+      flex-basis: 40%;
+    }
+  }
+  &__blockquote-col {
+    margin-top: -3rem;
+    @include media-breakpoint-up(md) {
+      flex-basis: 87%;
+      margin-left: 13%;
+    }
+    @include media-breakpoint-up(xl) {
+      flex-basis: 65%;
+      padding-top: 0;
+      margin-left: -5%;
+      margin-top: 7rem;
+    }
+  }
+}
+
+.section-files {
+  padding: 5rem 0 0;
+
+  @include media-breakpoint-up(md) {
+    background-color: none;
+    padding: 6rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 7rem 0;
+    background-image: none;
+  }
+
+  &__row {
+    @include media-breakpoint-up(xl) {
+      margin: 4rem 0;
+    }
   }
 
   &__cta-col {
@@ -96,6 +135,7 @@
       flex-basis: 50%;
     }
   }
+
   &__blockquote-col {
     margin-top: -3rem;
     @include media-breakpoint-up(md) {
@@ -108,39 +148,36 @@
       flex-basis: 55%;
       padding-top: 0;
       margin-left: -5%;
-      margin-top: 7rem;
+      margin-top: 2rem;
+    }
+  }
+
+  &__row--reversed {
+    .section-files__cta-col {
+      @include media-breakpoint-up(xl) {
+        margin-left: -5%;
+        flex-basis: 55%;
+      }
     }
   }
 }
 
+.section-partners {
+  padding: 5rem 1.6rem 5rem;
+  @include media-breakpoint-up(md) {
+    padding: 0 0 6rem;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 0 0 7rem;
+  }
+}
+
 .section-contact {
-  padding: 0 0 4%;
-
+  padding: 5rem 1.6rem;
+  @include media-breakpoint-up(md) {
+    padding: 6rem 0;
+  }
   @include media-breakpoint-up(xl) {
-    padding: 5.25% 0;
-    margin-top: 0;
-  }
-
-  &__form-col {
-    padding: 4.2rem 1.6rem;
-    @include media-breakpoint-up(md) {
-      padding: 6.5rem 2.5rem 1.5rem;
-    }
-    @include media-breakpoint-up(xl) {
-      padding: 0;
-    }
-  }
-
-  &__row {
-    align-items: center;
-  }
-
-  @include media-breakpoint-up(xl) {
-    &__col:first-child {
-      padding-right: 1.5rem;
-    }
-    &__col:last-child {
-      padding-left: 1.5rem;
-    }
+    padding: 7rem 0;
   }
 }

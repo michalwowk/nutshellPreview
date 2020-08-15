@@ -1,0 +1,14 @@
+.files {
+  &__pzu {
+    position: absolute;
+    right: 20%;
+    bottom: 1rem;
+    width: 4.5rem;
+    @include media-breakpoint-up(md) {
+      width: 6rem;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 7rem;
+    }
+  }
+}

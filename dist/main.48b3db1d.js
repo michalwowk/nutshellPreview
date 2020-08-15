@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\fonts\\MilluniumMedium\\Millunium-Medium.eot":[["Millunium-Medium.4454dcbd.eot","fonts/MilluniumMedium/Millunium-Medium.eot"],"fonts/MilluniumMedium/Millunium-Medium.eot"],"./..\\fonts\\MilluniumMedium\\Millunium-Medium.woff":[["Millunium-Medium.6f2dba35.woff","fonts/MilluniumMedium/Millunium-Medium.woff"],"fonts/MilluniumMedium/Millunium-Medium.woff"],"./..\\fonts\\MilluniumMedium\\Millunium-Medium.ttf":[["Millunium-Medium.3de20be2.ttf","fonts/MilluniumMedium/Millunium-Medium.ttf"],"fonts/MilluniumMedium/Millunium-Medium.ttf"],"./..\\fonts\\MilluniumMedium\\Millunium-Medium.svg":[["Millunium-Medium.0619a11c.svg","fonts/MilluniumMedium/Millunium-Medium.svg"],"fonts/MilluniumMedium/Millunium-Medium.svg"],"./..\\fonts\\FontAwesome\\fontawesome-webfont.eot":[["fontawesome-webfont.aac253ae.eot","fonts/FontAwesome/fontawesome-webfont.eot"],"fonts/FontAwesome/fontawesome-webfont.eot"],"./..\\fonts\\FontAwesome\\fontawesome-webfont.woff":[["fontawesome-webfont.ab9fb1d4.woff","fonts/FontAwesome/fontawesome-webfont.woff"],"fonts/FontAwesome/fontawesome-webfont.woff"],"./..\\fonts\\FontAwesome\\fontawesome-webfont.ttf":[["fontawesome-webfont.66b5b27e.ttf","fonts/FontAwesome/fontawesome-webfont.ttf"],"fonts/FontAwesome/fontawesome-webfont.ttf"],"./..\\fonts\\FontAwesome\\fontawesome-webfont.svg":[["fontawesome-webfont.4c67a7e5.svg","fonts/FontAwesome/fontawesome-webfont.svg"],"fonts/FontAwesome/fontawesome-webfont.svg"],"./..\\img\\pp-main-background.jpg":[["pp-main-background.2a737329.jpg","img/pp-main-background.jpg"],"img/pp-main-background.jpg"],"_css_loader":"C:/Users/DevMike/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"C:/Users/DevMike/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\fonts\\FontAwesome\\fontawesome-webfont.eot":[["fontawesome-webfont.aac253ae.eot","fonts/FontAwesome/fontawesome-webfont.eot"],"fonts/FontAwesome/fontawesome-webfont.eot"],"./..\\fonts\\FontAwesome\\fontawesome-webfont.woff":[["fontawesome-webfont.ab9fb1d4.woff","fonts/FontAwesome/fontawesome-webfont.woff"],"fonts/FontAwesome/fontawesome-webfont.woff"],"./..\\fonts\\FontAwesome\\fontawesome-webfont.ttf":[["fontawesome-webfont.66b5b27e.ttf","fonts/FontAwesome/fontawesome-webfont.ttf"],"fonts/FontAwesome/fontawesome-webfont.ttf"],"./..\\fonts\\FontAwesome\\fontawesome-webfont.svg":[["fontawesome-webfont.4c67a7e5.svg","fonts/FontAwesome/fontawesome-webfont.svg"],"fonts/FontAwesome/fontawesome-webfont.svg"],"./..\\img\\arrow-left.svg":[["arrow-left.5a15d768.svg","img/arrow-left.svg"],"img/arrow-left.svg"],"./..\\img\\arrow-right.svg":[["arrow-right.77e558a1.svg","img/arrow-right.svg"],"img/arrow-right.svg"],"./..\\img\\header-bg.jpg":[["header-bg.238d3e41.jpg","img/header-bg.jpg"],"img/header-bg.jpg"],"./..\\img\\logo.png":[["logo.cecc779a.png","img/logo.png"],"img/logo.png"],"./..\\img\\bialystok.png":[["bialystok.24ec4e2c.png","img/bialystok.png"],"img/bialystok.png"],"_css_loader":"C:/Users/DevMike/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"C:/Users/DevMike/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65455" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57159" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -248,8 +248,9 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
         assetsToAccept.forEach(function (v) {
           hmrAcceptRun(v[0], v[1]);
         });
-      } else {
-        window.location.reload();
+      } else if (location.reload) {
+        // `location` global exists in a web worker context but lacks `.reload()` function.
+        location.reload();
       }
     }
 

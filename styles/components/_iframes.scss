@@ -1,0 +1,11 @@
+.iframe {
+  &__container {
+    box-shadow: 0 3px 6px rgba($c-black, 0.2);
+    width: 100%;
+  }
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 350px;
+  }
+}
