@@ -5102,23 +5102,25 @@ p {
 .carousel .swiper-button-next {
   background-image: url("/arrow-right.77e558a1.svg");
 }
-.carousel .swiper-slide img {
-  filter: grayscale(1);
-  transition: all 0.2s ease-in-out;
-}
-.carousel .swiper-slide a {
-  color: #000;
-}
-.carousel .swiper-slide:hover .carousel__title {
-  color: #3bbeef;
-}
-.carousel .swiper-slide:hover img {
-  filter: grayscale(0);
-}
 .carousel__title {
   margin-top: 1.5rem;
   color: #000;
   transition: all 0.2s ease-in-out;
+}
+.carousel__link {
+  color: #000;
+  padding: 20px;
+  display: block;
+}
+.carousel__link img {
+  filter: grayscale(1);
+  transition: all 0.2s ease-in-out;
+}
+.carousel__link:hover .carousel__title {
+  color: #3bbeef;
+}
+.carousel__link:hover img {
+  filter: grayscale(0);
 }
 .carousel .img-container {
   margin: 0 auto;

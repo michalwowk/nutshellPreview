@@ -11613,12 +11613,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _animations.handleAnimationsInView)();
 window.addEventListener("load", function () {
   var swiper = new _swiper.default(".swiper-container", {
-    slidesPerView: 6,
-    slidesPerGroup: 3,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
     loop: true,
-    autoplay: {
-      delay: 4500
-    },
+    autoplay: false,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
