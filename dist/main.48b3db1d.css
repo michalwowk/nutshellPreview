@@ -5114,7 +5114,7 @@ p {
   z-index: 2;
   top: 0;
   right: 0;
-  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.9));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9));
 }
 @media (min-width: 768px) {
   .carousel .swiper-container:after {

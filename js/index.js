@@ -10,6 +10,7 @@ window.addEventListener("load", () => {
         slidesPerView: 5,
         slidesPerGroup: 1,
         loop: true,
+        loopAdditionalSlides: 1,
         autoplay: {
             delay: 4000,
         },
@@ -25,6 +26,7 @@ window.addEventListener("load", () => {
         breakpoints: {
             600: {
                 slidesPerView: 2,
+                slidesPerGroup: 2,
                 spaceBetween: 18,
             },
             768: {
