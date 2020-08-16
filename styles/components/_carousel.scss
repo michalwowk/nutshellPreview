@@ -1,51 +1,101 @@
 .carousel {
-  .swiper-container {
-    margin-top: 4rem;
-  }
+    .swiper-container {
+        margin-top: 4rem;
+        padding-right: 80px;
+        position: relative;
 
-  .swiper-button {
-    &-prev {
-      background-image: url("../img/arrow-left.svg");
+        @include media-breakpoint-up(md) {
+            padding-right: 0;
+        }
+
+        &:after {
+            @include pseudo();
+            display: block;
+            width: 80px;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            background-image: linear-gradient(
+                to right,
+                transparent,
+                rgba($c-white, 0.9)
+            );
+
+            @include media-breakpoint-up(md) {
+                display: none;
+            }
+        }
     }
 
-    &-next {
-      background-image: url("../img/arrow-right.svg");
-    }
-  }
+    .swiper-button {
+        &-prev {
+            background-image: url("../img/arrow-left.svg");
 
-  &__title {
-    margin-top: 1.5rem;
-    color: $c-black;
-    transition: $transition-all-default;
-  }
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
 
-  &__link {
-    color: $c-black;
-    padding: 20px;
-    display: block;
+        &-next {
+            background-image: url("../img/arrow-right.svg");
 
-    img {
-      filter: grayscale(1);
-      transition: $transition-all-default;
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
     }
 
-    &:hover {
-      .carousel__title {
-        color: $c-brand;
-      }
-
-      img {
-        filter: grayscale(0);
-      }
+    &__title {
+        margin-top: 1.5rem;
+        color: $c-black;
+        transition: $transition-all-default;
+        min-height: 40px;
     }
-  }
 
-  .img-container {
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    &__link {
+        color: $c-black;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+
+        &:hover {
+            .carousel__title {
+                color: $c-brand;
+            }
+
+            .img-container img {
+                filter: grayscale(0);
+            }
+        }
+    }
+
+    .img-container {
+        margin: 0 auto;
+        width: 85px;
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include media-breakpoint-up(sm) {
+            width: 100px;
+            height: 100px;
+        }
+
+        @include media-breakpoint-up(md) {
+            img {
+                filter: grayscale(1);
+                transition: $transition-all-default;
+            }
+        }
+    }
 }

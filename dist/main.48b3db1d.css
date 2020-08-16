@@ -4673,7 +4673,7 @@ a:hover {
 }
 
 .heading-4 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 2rem;
   letter-spacing: 2px;
 }
@@ -5095,40 +5095,93 @@ p {
 
 .carousel .swiper-container {
   margin-top: 4rem;
+  padding-right: 80px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .carousel .swiper-container {
+    padding-right: 0;
+  }
+}
+.carousel .swiper-container:after {
+  content: "";
+  display: block;
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.9));
+}
+@media (min-width: 768px) {
+  .carousel .swiper-container:after {
+    display: none;
+  }
 }
 .carousel .swiper-button-prev {
   background-image: url("/arrow-left.5a15d768.svg");
 }
+@media (max-width: 767.98px) {
+  .carousel .swiper-button-prev {
+    display: none;
+  }
+}
 .carousel .swiper-button-next {
   background-image: url("/arrow-right.77e558a1.svg");
+}
+@media (max-width: 767.98px) {
+  .carousel .swiper-button-next {
+    display: none;
+  }
 }
 .carousel__title {
   margin-top: 1.5rem;
   color: #000;
   transition: all 0.2s ease-in-out;
+  min-height: 40px;
 }
 .carousel__link {
   color: #000;
-  padding: 20px;
   display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
-.carousel__link img {
-  filter: grayscale(1);
-  transition: all 0.2s ease-in-out;
+@media (min-width: 768px) {
+  .carousel__link {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
 }
 .carousel__link:hover .carousel__title {
   color: #3bbeef;
 }
-.carousel__link:hover img {
+.carousel__link:hover .img-container img {
   filter: grayscale(0);
 }
 .carousel .img-container {
   margin: 0 auto;
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 576px) {
+  .carousel .img-container {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .carousel .img-container img {
+    filter: grayscale(1);
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 .contact__group {

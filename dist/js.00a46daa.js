@@ -11613,7 +11613,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _animations.handleAnimationsInView)();
 window.addEventListener("load", function () {
   var swiper = new _swiper.default(".swiper-container", {
-    slidesPerView: 4,
+    slidesPerView: 5,
     slidesPerGroup: 1,
     loop: true,
     autoplay: false,
@@ -11627,23 +11627,16 @@ window.addEventListener("load", function () {
     },
     breakpoints: {
       // when window width is <= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        slidesPerGroup: 1
-      },
-      480: {
+      600: {
         slidesPerView: 2,
-        spaceBetween: 20,
-        slidesPerGroup: 2
+        slidesPerGroup: 1,
+        spaceBetween: 18
       },
       768: {
-        slidesPerView: 3,
-        spaceBetween: 30
+        slidesPerView: 3
       },
       1200: {
-        slidesPerView: 5,
-        spaceBetween: 30
+        slidesPerView: 4
       }
     }
   });
@@ -11676,7 +11669,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57159" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63488" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
