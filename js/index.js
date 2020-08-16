@@ -25,16 +25,13 @@ window.addEventListener("load", () => {
         breakpoints: {
             600: {
                 slidesPerView: 2,
-                slidesPerGroup: 2,
                 spaceBetween: 18,
             },
             768: {
                 slidesPerView: 3,
-                slidesPerGroup: 3,
             },
             1200: {
                 slidesPerView: 4,
-                slidesPerGroup: 1,
             },
         },
     });
