@@ -10,7 +10,9 @@ window.addEventListener("load", () => {
         slidesPerView: 5,
         slidesPerGroup: 1,
         loop: true,
-        autoplay: false,
+        autoplay: {
+            delay: 4000,
+        },
 
         navigation: {
             nextEl: ".swiper-button-next",
@@ -21,17 +23,18 @@ window.addEventListener("load", () => {
             onlyInViewport: true,
         },
         breakpoints: {
-            // when window width is <= 320px
             600: {
                 slidesPerView: 2,
-                slidesPerGroup: 1,
+                slidesPerGroup: 2,
                 spaceBetween: 18,
             },
             768: {
                 slidesPerView: 3,
+                slidesPerGroup: 3,
             },
             1200: {
                 slidesPerView: 4,
+                slidesPerGroup: 1,
             },
         },
     });
