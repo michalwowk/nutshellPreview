@@ -11617,8 +11617,10 @@ window.addEventListener("load", function () {
     slidesPerGroup: 1,
     loop: true,
     loopAdditionalSlides: 1,
+    updateOnWindowResize: true,
     autoplay: {
-      delay: 4000
+      delay: 4000,
+      disableOnInteraction: false
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -11636,9 +11638,6 @@ window.addEventListener("load", function () {
         slidesPerView: 4
       }
     }
-  });
-  window.addEventListener("resize", function () {
-    swiper.update();
   });
 });
 },{"./navigation":"js/navigation.js","./animations":"js/animations.js","swiper":"node_modules/swiper/dist/js/swiper.esm.bundle.js"}],"C:/Users/DevMike/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

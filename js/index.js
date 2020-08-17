@@ -11,8 +11,10 @@ window.addEventListener("load", () => {
         slidesPerGroup: 1,
         loop: true,
         loopAdditionalSlides: 1,
+        updateOnWindowResize: true,
         autoplay: {
             delay: 4000,
+            disableOnInteraction: false,
         },
         navigation: {
             nextEl: ".swiper-button-next",
@@ -30,8 +32,5 @@ window.addEventListener("load", () => {
                 slidesPerView: 4,
             },
         },
-    });
-    window.addEventListener("resize", () => {
-        swiper.update();
     });
 });
