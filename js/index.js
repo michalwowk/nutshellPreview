@@ -14,19 +14,13 @@ window.addEventListener("load", () => {
         autoplay: {
             delay: 4000,
         },
-
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
         breakpoints: {
             600: {
                 slidesPerView: 2,
-                slidesPerGroup: 2,
                 spaceBetween: 18,
             },
             768: {
@@ -36,5 +30,8 @@ window.addEventListener("load", () => {
                 slidesPerView: 4,
             },
         },
+    });
+    window.addEventListener("resize", () => {
+        swiper.update();
     });
 });

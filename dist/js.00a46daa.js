@@ -11624,14 +11624,9 @@ window.addEventListener("load", function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true
-    },
     breakpoints: {
       600: {
         slidesPerView: 2,
-        slidesPerGroup: 2,
         spaceBetween: 18
       },
       768: {
@@ -11641,6 +11636,9 @@ window.addEventListener("load", function () {
         slidesPerView: 4
       }
     }
+  });
+  window.addEventListener("resize", function () {
+    swiper.update();
   });
 });
 },{"./navigation":"js/navigation.js","./animations":"js/animations.js","swiper":"node_modules/swiper/dist/js/swiper.esm.bundle.js"}],"C:/Users/DevMike/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -11671,7 +11669,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65371" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50732" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
